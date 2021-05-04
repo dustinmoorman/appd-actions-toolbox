@@ -33,5 +33,5 @@ do
   if [[ "${ENABLE_SAFE_MODE}" == "true" ]]; then
     echo "Java pid ${PID} found, creating heap dump at ${HEAP_DUMP_PATH}/java-${PID}.dump"
   fi
-  $JCMD_COMMAND ${PID} GC.heap_dump "${HEAP_DUMP_PATH}/java-${PID}.dump"
+  ${JCMD_COMMAND} ${PID} GC.heap_dump "${HEAP_DUMP_PATH}/java-${PID}.dump"
 done
