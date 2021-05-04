@@ -1,7 +1,7 @@
 #!/bin/bash
 
 JCMD_PATH_PART="java8/bin/jcmd"
-HEAP_DUMP_PATH="/home/dustinmoorman/Code/appd-actions-toolbox"
+HEAP_DUMP_PATH="/path/to/your/dumps"
 JCMD_COMMAND="jcmd"
 JCMD_COMMAND_BACKUP="/usr/local/test/java/java8/bin/jcmd"
 
@@ -30,5 +30,5 @@ do
   if [[ "${ENABLE_SAFE_MODE}" == "true" ]]; then
     echo "Java pid ${PID} found, creating heap dump at ${HEAP_DUMP_PATH}/java-${PID}.dump"
   fi
-  $JCMD_COMMAND ${PID} GC.heap_dump "${HEAP_DUMP_PATH}/java-${PID}.dump"
+  ${JCMD_COMMAND} ${PID} GC.heap_dump "${HEAP_DUMP_PATH}/java-${PID}.dump"
 done
