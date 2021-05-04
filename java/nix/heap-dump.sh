@@ -3,7 +3,7 @@
 ENABLE_SAFE_MODE="true"
 JAVA_HOME_BACKUP="/usr/local/test/java/"
 JCMD_PATH_PART="java8/bin/jcmd"
-HEAP_DUMP_PATH="/home/dustinmoorman/Code/appd-actions-toolbox"
+HEAP_DUMP_PATH="/path/to/your/dumps"
 JCMD_COMMAND="jcmd"
 
 ### WIP: Safe mode stuff, making sure we have our requirements. 
