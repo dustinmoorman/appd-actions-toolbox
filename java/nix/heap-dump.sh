@@ -13,7 +13,7 @@ ENABLE_SAFE_MODE="true"
 set -e
 
 if [[ $(command -v jcmd) != "" ]] && [[ "${ENABLE_SAFE_MODE}" == "true" ]]; then
-  echo "JCMD Exists in path"
+  echo "JCMD command exists in path"
 else
   if [[ $(echo "${JAVA_HOME_BACKUP}${JCMD_PATH_PART}") ]] && [[ "${ENABLE_SAFE_MODE}" == "true" ]]; then
     echo "No JCMD, setting to JCMD_COMMAND_BACKUP (script defined): ${JCMD_COMMAND_BACKUP}"
